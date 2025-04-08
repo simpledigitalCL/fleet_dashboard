@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_fleet_dashboard_kanban" model="ir.ui.view">
+        <field name="name">fleet.vehicle.kanban.dashboard</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="peso_total"/>
+                <field name="porcentaje_uso"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_record">
+                            <div class="o_kanban_primary_left">
+                                <strong><t t-esc="record.name.value"/></strong>
+                            </div>
+                            <div>
+                                <t t-if="record.picking_ids.raw_value.length">
+                                    <p>Total: <t t-esc="record.peso_total.value"/> kg</p>
+                                    <p>Uso: <t t-esc="record.porcentaje_uso.value"/>%</p>
+                                    <ul>
+                                        <t t-foreach="record.picking_ids.raw_value" t-as="pid">
+                                            <li><t t-esc="pid.display_name"/></li>
+                                        </t>
+                                    </ul>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
