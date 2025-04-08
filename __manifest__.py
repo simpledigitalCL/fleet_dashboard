@@ -1,5 +1,5 @@
 {
-    "name": "Fleet Dashboard Report Simpledigitla",
+    "name": "Fleet Dashboard Report Simpledigital",
     "version": "1.0",
     "autor": "Simpledigital",
     "website": "https://simpledigital.cl",
