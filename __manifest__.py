@@ -5,7 +5,7 @@
     "website": "https://simpledigital.cl",
     "category": "Inventory",
     "summary": "Dashboard PDF con pedidos asignados a camiones",
-    "depends": ["fleet", "web"],
+    "depends": ["stock", "fleet", "web"],
     "data": [
         "views/fleet_dashboard_view.xml",
         "views/fleet_dashboard_detailed_view.xml",
