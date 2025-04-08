@@ -14,7 +14,7 @@
         "report/fleet_dashboard_report.xml",
         "report/fleet_dashboard_report_detailed.xml",
     ],
-    "assets": {},
     "installable": True,
     "application": True,
+    "pre_init_hook": "pre_init_check",
 }
