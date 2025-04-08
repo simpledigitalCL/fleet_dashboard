@@ -1,7 +1,7 @@
 {
     "name": "Fleet Dashboard Report Simpledigital",
     "version": "1.0",
-    "autor": "Simpledigital",
+    "author": "Simpledigital",
     "website": "https://simpledigital.cl",
     "category": "Inventory",
     "summary": "Dashboard PDF con pedidos asignados a camiones",
