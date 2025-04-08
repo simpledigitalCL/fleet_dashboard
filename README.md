@@ -42,7 +42,3 @@ Este módulo agrega un panel de control visual y reportes PDF para visualizar la
 ## 🧪 Créditos
 
 Desarrollado por **SimpleDigital.cl** para optimizar la logística y gestión de flotas en empresas con entregas asignadas a camiones.
-
----
-
-¿Quieres agregar una imagen del dashboard o dejarlo más técnico/documentado para Odoo App Store? También puedo prepararte uno con badges si lo subirás a GitHub.
