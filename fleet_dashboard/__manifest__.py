@@ -16,5 +16,5 @@
     ],
     "installable": True,
     "application": True,
-    "pre_init_hook": "pre_init_check",
+    "pre_init_hook": "pre_init_check"
 }
