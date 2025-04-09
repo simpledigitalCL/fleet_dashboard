@@ -1,6 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="stock.picking_type_out" model="stock.picking.type">
-        <field name="auto_batch">True</field>
-        <field name="batch_group_by_partner">True</field>
+        <field name="name">Entregas (con Dashboard de Camiones)</field>
+        <!-- Puedes agregar campos seguros como: -->
+        <!-- <field name="sequence">20</field> -->
+        <!-- <field name="default_location_src_id" ref="stock.stock_location_stock"/> -->
+        <!-- etc... -->
     </record>
 </odoo>
