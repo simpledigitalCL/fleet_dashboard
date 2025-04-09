@@ -6,6 +6,7 @@ class FleetVehicle(models.Model):
     capacidad_kg = fields.Float(string="Capacidad (kg)")
     picking_ids = fields.One2many('stock.picking', 'vehicle_id', string="Pedidos Asignados")
     peso_total = fields.Float(string="Peso total cargado")
+    used_weight_percentage = fields.Float(string="% Uso camión")  # Este campo es obligatorio para el kanban
 
     def _get_total_weight(self):
         for record in self:
@@ -31,8 +32,6 @@ class StockPicking(models.Model):
     def write(self, vals):
         res = super().write(vals)
         for picking in self:
-            # Solo recalcula si es tipo OUT y tiene (o se le asignó) un vehículo
             if picking.picking_type_id.code == 'outgoing' and (vals.get('vehicle_id') or picking.vehicle_id):
                 picking.vehicle_id._get_total_weight()
         return res
-
