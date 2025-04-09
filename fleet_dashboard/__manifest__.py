@@ -7,6 +7,7 @@
     "summary": "Dashboard PDF con pedidos asignados a camiones",
     "depends": ["stock", "fleet", "web"],
     "data": [
+        "data/picking_type_config.xml",
         "views/fleet_dashboard_view.xml",
         "views/fleet_dashboard_detailed_view.xml",
         "views/fleet_dashboard_kanban_view.xml",
