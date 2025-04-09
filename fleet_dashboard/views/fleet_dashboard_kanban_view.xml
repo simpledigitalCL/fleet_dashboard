@@ -24,11 +24,17 @@
                                         </t>
                                     </ul>
                                 </t>
+                                <t t-else="">
+                                    <p style="color: gray;"><em>No hay pedidos asignados a este camión.</em></p>
+                                </t>
                             </div>
                         </div>
                     </t>
                 </templates>
             </kanban>
         </field>
+    </record>
+</odoo>
+
     </record>
 </odoo>
