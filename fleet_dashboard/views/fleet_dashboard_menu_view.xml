@@ -6,10 +6,10 @@
               parent="stock.menu_stock_warehouse_mgmt"
               sequence="100"/>
 
-    <record id="action_fleet_dashboard_tree" model="ir.actions.act_window">
+    <record id="action_fleet_dashboard_kanban" model="ir.actions.act_window">
         <field name="name">Camiones con Pedidos</field>
         <field name="res_model">fleet.vehicle</field>
-        <field name="view_mode">kanban,tree,form</field>
+        <field name="view_mode">kanban,form</field>
         <field name="domain">[('picking_ids','!=',[])]</field>
         <field name="context">{}</field>
     </record>
@@ -17,6 +17,6 @@
     <menuitem id="menu_fleet_dashboard_action"
               name="Vista General"
               parent="menu_fleet_dashboard_root"
-              action="action_fleet_dashboard_tree"
+              action="action_fleet_dashboard_kanban"
               sequence="1"/>
 </odoo>
