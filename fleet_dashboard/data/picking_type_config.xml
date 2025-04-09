@@ -1,0 +1,6 @@
+<odoo>
+    <record id="stock.picking_type_out" model="stock.picking.type">
+        <field name="auto_batch">True</field>
+        <field name="batch_group_by_partner">True</field>
+    </record>
+</odoo>
