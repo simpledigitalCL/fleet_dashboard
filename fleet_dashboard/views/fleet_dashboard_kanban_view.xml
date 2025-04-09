@@ -7,7 +7,8 @@
             <kanban>
                 <field name="name"/>
                 <field name="peso_total"/>
-                <field name="porcentaje_uso"/>
+                <field name="used_weight_percentage"/>
+                <field name="picking_ids"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click o_kanban_record">
@@ -15,12 +16,17 @@
                                 <strong><t t-esc="record.name.value"/></strong>
                             </div>
                             <div>
+                                <p><strong>Total cargado:</strong> <t t-esc="record.peso_total.value"/> kg</p>
+                                <p><strong>Uso:</strong> <t t-esc="record.used_weight_percentage.value"/>%</p>
                                 <t t-if="record.picking_ids.raw_value.length">
-                                    <p>Total: <t t-esc="record.peso_total.value"/> kg</p>
-                                    <p>Uso: <t t-esc="record.porcentaje_uso.value"/>%</p>
                                     <ul>
                                         <t t-foreach="record.picking_ids.raw_value" t-as="pid">
-                                            <li><t t-esc="pid.display_name"/></li>
+                                            <li>
+                                                <t t-esc="pid.display_name"/> —
+                                                <t t-esc="pid.peso_total"/> kg —
+                                                <t t-esc="pid.partner_id.name"/>
+                                                (<t t-esc="pid.partner_id.city"/>, <t t-esc="pid.partner_id.state_id.name"/>)
+                                            </li>
                                         </t>
                                     </ul>
                                 </t>
@@ -33,8 +39,5 @@
                 </templates>
             </kanban>
         </field>
-    </record>
-</odoo>
-
     </record>
 </odoo>
